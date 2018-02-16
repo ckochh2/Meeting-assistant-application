@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="xpresso">
+  <head>
+    <title>Xpresso - The meeting assistant</title>
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- All library styles files -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- All styles files -->
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+
+    <!-- JS libraries -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+
+    <!-- JS files -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/app.conf.js"></script>
+
+    <script type="text/javascript" src="app/home/home.js"></script>
+    <script type="text/javascript" src="app/home/home.conf.js"></script>
+    <script type="text/javascript" src="app/home/services/home.service.js"></script>
+    <script type="text/javascript" src="app/home/controllers/home.controller.js"></script>
+
+    <script type="text/javascript" src="app/about/about.js"></script>
+    <script type="text/javascript" src="app/about/about.conf.js"></script>
+    <script type="text/javascript" src="app/about/services/about.service.js"></script>
+    <script type="text/javascript" src="app/about/controllers/about.controller.js"></script>
+
+    <base href="/" />
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div class='row navbar navbar-default'>
+        <div class='col-md-1 navbar-brand text-center'>Xpresso</div>
+        <div class='col-md-1 navbar-brand btn text-center'>
+          <span href ui-sref="home"><i class="fa fa-home"></i> Home</span>
+        </div>
+        <div class='col-md-1 navbar-brand btn text-center'>
+          <span href ui-sref="about"><i class="fa fa-info-circle"></i> What is it?</span>
+        </div>
+        <div class='col-md-7'></div>
+        <div class='col-md-1 navbar-brand btn text-center'>Summary</div>
+        <div class='col-md-1 navbar-brand btn text-center'>Close</div>
+      </div>
+      <div class='left-panel'>
+        <div class='left-panel-sec1'>
+          <!-- Clock - timer -->
+          <div class='h1 text-center'>Clock - Timer</div>
+        </div>
+        <div class='left-panel-sec2'>
+          <!-- Topics pending panel -->
+          <div class='h1 text-center'>Topic Pending</div>
+        </div>
+        <div class='left-panel-sec3'>
+          <!-- Topics finished panel -->
+          <div class='h1 text-center'>Topic Finished</div>
+        </div>
+      </div>
+      <div class='center-panel'>
+        <div class="container" ui-view="main"></div>
+      </div>
+      <div class='right-panel'>
+		<div class="progress progress-bar-vertical">
+		  <div class="progress progress-bar-vertical">
+		    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 60%;">
+			  <span class="sr-only">60% Complete</span>
+		    </div>
+		  </div>
+		</div>
+      </div>
+
+  </body>
+</html>
